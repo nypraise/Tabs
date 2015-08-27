@@ -1,0 +1,10 @@
+<!--Vare tab-->
+<form name="vareForm" novalidate>
+    <label class="inputLabel">Navn på leverandør</label>
+    <input type="text" class="form-control itemName" placeholder="Leverandørens navn" ng-model="formData.supplierName" required>
+
+    <label class="inputLabel">Navn på vare</label>
+    <input type="text" class="form-control itemName" placeholder="Varens navn" ng-model="formData.itemName" required>
+
+    <button type="button" class="btn btn-default navButton" ng-click="continue(0)" ng-disabled="vareForm.$invalid">Neste</button>
+</form>

@@ -1,0 +1,38 @@
+<html ng-app="app">
+
+<head>
+
+    <link rel="stylesheet" href="Style/bootstrap.min.css">
+    <link rel="stylesheet" href="Style/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="Style/style.css">
+
+</head>
+
+<body>
+
+    <div id="inputArea" ng-controller="tabsController">
+        <!--Tabs from AngularUI-->
+        <tabset justified="true">
+
+            <tab ng-repeat="tabItem in tabs" heading="{{tabItem.heading}}" active="tabItem.active" disabled="tabItem.disabled">
+                <div ng-include="tabItem.template"></div>
+            </tab>
+
+        </tabset>
+
+    </div>
+
+</body>
+
+<script src="Script/angular.min.js"></script>
+<script src="Script/ui-bootstrap-tpls-0.13.3.min.js "></script>
+<script src="Script/jquery-1.11.3.min.js"></script>
+
+<script src="Script/app.js"></script>
+<script src="Controllers/tabsController.js "></script>
+<script src="Directives/fileInfo.js "></script>
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js "></script>-->
+
+
+
+</html>

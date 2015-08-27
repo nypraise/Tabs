@@ -1,0 +1,22 @@
+<!--Butikk tab-->
+<form name="butikkForm" novalidate>
+
+    <label class="inputLabel">Hvor handlet du varen?</label>
+    </br>
+
+    <input type="radio" id="rimi" value="Rimi" name="storeInput" ng-model="formData.shop" required> <span class="shopLabel">Rimi</span></br>
+    <input type="radio" id="rema" value="Rema" name="storeInput" ng-model="formData.shop"> <span class="shopLabel">Rema</span></br>
+    <input type="radio" id="kiwi" value="Kiwi" name="storeInput" ng-model="formData.shop"> <span class="shopLabel">Kiwi</span></br>
+
+    <label class="inputLabel" ng-click="getName()">Last opp bilde av varen</label>
+    </br>
+
+    <span class="btn btn-default btn-file" ng-click="getName(fileName)">
+                    Velg fil <input type="file" file-info/> 
+                </span></br>
+    <span ng-if="fileName"><div class="inputLabel">Vi har mottatt:</div> {{fileName}}</span>
+
+    <button type="button" class="btn btn-default navButton" ng-click="continue(2)" ng-disabled="butikkForm.$invalid">Neste </button>
+    <button type="button" class="btn btn-default navButton" ng-click="continue(1)">Forrige</button>
+
+</form>

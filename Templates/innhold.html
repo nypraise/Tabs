@@ -1,0 +1,13 @@
+<!--Innhold tab-->
+<form name="innholdForm" novalidate>
+    <label class="inputLabel">Mengde sukker</label>
+    <input type="number" class="form-control itemAmount " placeholder="5 " ng-model="formData.amount" required>
+    <span class="measureLabel">mg</span></br>
+
+    <label class="inputLabel ">Varens vekt</label>
+    <input type="number" class="form-control itemAmount " placeholder="100" ng-model="formData.weight" required>
+    <span class="measureLabel"> g</span>
+    </br>
+    <button type="button" class="btn btn-default navButton" ng-click="continue(1)" ng-disabled="innholdForm.$invalid">Neste </button>
+    <button type="button" class="btn btn-default navButton" ng-click="continue(0)">Forrige</button>
+</form>
